@@ -1,0 +1,68 @@
+# =========================================
+# MAVEN / BUILDS
+# =========================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================================
+# IDEs E EDITORES (Eclipse, STS, IntelliJ, VS Code)
+# =========================================
+# Eclipse / Spring Tool Suite (STS)
+.settings/
+.project
+.classpath
+*.launch
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# =========================================
+# SISTEMA OPERACIONAL
+# =========================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+~*
+.directory
+
+# =========================================
+# SERVIDORES E COMPILAÇÃO LOCAL (Tomcat / WAR)
+# =========================================
+# Arquivos temporários de deploy ou work do Tomcat
+work/
+tomcat.log
+.tmp/
+*.war
+*.ear
+*.zip
+
+# Configurações locais de ambiente e credenciais
+application-local.properties
+application-local.yml
+*.env
