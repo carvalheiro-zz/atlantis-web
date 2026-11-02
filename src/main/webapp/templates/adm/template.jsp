@@ -19,6 +19,10 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link para o arquivo CSS externalizado -->
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/src.css" type="text/css"/>
+	
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col m-0 p-0 overflow-x-hidden">
 

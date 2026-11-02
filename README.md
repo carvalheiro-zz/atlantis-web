@@ -74,3 +74,28 @@ Entregue apenas o código Java da classe de teste de integração limpo, padroni
 
 ```
 ---
+
+# PROMPT DE CRIACAO DOS JSPs
+```text
+Por favor, desenvolva o código da página JSP para a entidade [INSERIR_NOME_DO_PO_AQUI] seguindo rigorosamente as diretrizes e padrões arquiteturais do nosso projeto (Struts 1.3.10 + Apache Tiles):
+
+1. Estrutura e Template:
+   - A página será renderizada dentro do Template.jsp utilizando a tag <tiles:insert name="body" />.
+   - Siga rigorosamente o padrão de CSS e estilização já incluído no template existente.
+
+2. Divisão de Layout (HEADER, BODY e FOOTER):
+   - HEADER: Deve conter o título da tela, derivado exatamente do nome da classe PO sem o sufixo "PO" (Ex: ClientePO -> Título: "Cliente").
+   - BODY: 
+     * No topo do BODY, exiba os 4 campos de auditoria em formato não editável (Labels: "Criado por:", "Criado em:", "Alterado por:", "Alterado em:").
+     * Os campos de dados da entidade devem seguir estritamente o formato "LABEL CAMPO" (Ex: Nome: [campo aqui]).
+     * Organização dos campos: em formato in-line (um na frente do outro) para monitores grandes, adaptando-se de forma responsiva para telas médias e pequenas (empilhados em coluna).
+   - FOOTER:
+     * Localização exclusiva para os botões de ação na seguinte ordem/padrão: Cadastrar, Alterar, Pesquisar, Excluir, Novo e Cancelar.
+
+3. Tratamento de Mensagens:
+   - As mensagens de SUCESSO e ERRO devem ser exibidas utilizando class="alert" integradas com as tags do Struts (org.apache.struts.action.ActionMessages).
+
+Por favor, forneça o código completo e limpo do arquivo JSP correspondente.
+
+```
+---

@@ -8,6 +8,7 @@
 	<!-- ================= Form Bean Definitions ================= -->
 	<form-beans>
 		<!-- Declare seus ActionForms aqui quando necessário -->
+		<form-bean name="telaForm" type="br.com.srcsoftware.web.atlantis.actionform.tela.TelaForm"></form-bean>
 	</form-beans>
 
 	<!-- ================= Global Forwards ================= -->
@@ -31,6 +32,24 @@
 			<forward name="telaLogin" path="/paginas/publico/adm/login.jsp" />
 			<forward name="sucesso" path="/home.src" />
 		</action>
+		
+		
+		
+		<!-- Configuração da Action de Login baseada em DispatchAction -->
+		<action path="/restrito/admin/tela"
+			type="br.com.srcsoftware.web.atlantis.actionform.tela.TelaAction"
+			name="telaForm"
+			scope="session"
+			parameter="method" > 
+			    		
+			<forward name="telaCadastro" path=".telaCadastro"/>
+			<forward name="sucesso" path=".telaCadastro" />			
+			<forward name="pesquisar" path=".telaPesquisa" />
+			
+			<!-- Retorna para a home global do sistema ao cancelar/sair -->
+			<forward name="home" path="/home.src" redirect="true" />
+		</action>
+				
 	</action-mappings>
 
 

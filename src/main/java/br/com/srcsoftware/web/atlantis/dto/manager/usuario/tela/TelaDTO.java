@@ -2,7 +2,7 @@ package br.com.srcsoftware.web.atlantis.dto.manager.usuario.tela;
 
 import java.util.Objects;
 
-import br.com.srcsoftware.web.atlantis.dto.abstracts.AbstractDTO;
+import br.com.srcsoftware.web.atlantis.dto.abstracts.AuditoriaAbstractDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,12 +14,13 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-public class TelaDTO extends AbstractDTO {
+public class TelaDTO extends AuditoriaAbstractDTO {
 
 	private String id;
     private String nome;
     private String query;
-
+    private String versao;    
+	
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

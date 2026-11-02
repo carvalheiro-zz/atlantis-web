@@ -3,20 +3,20 @@
 <nav class="navbar navbar-dark bg-dark px-4 py-2 w-100 flex justify-between items-center">
     <!-- Esquerda: Logo e Nome do Sistema -->
     <div class="flex items-center space-x-3">
-        <a class="navbar-brand flex items-center text-decoration-none text-white font-bold text-lg" href="#">
+        <a class="navbar-brand flex items-center text-decoration-none text-white font-bold fonte-titulo-sistema" href="#">
             <img src="${pageContext.request.contextPath}/assets/logos/logo.png" alt="Logo" class="h-8 w-auto mr-2 inline-block object-contain" />
             Atlantis Web
         </a>
     </div>
 
     <!-- Centro: Relógio Digital -->
-    <div class="flex items-center space-x-2 text-white bg-gray-800 px-3 py-1.5 rounded-md border border-gray-700 shadow-inner">
+    <div class="flex items-center space-x-2 text-white bg-gray-800 px-3 py-1.5 rounded-md border border-gray-700 shadow-inner fonte-relogio">
         <i class="fa-regular fa-clock text-gray-400"></i>
-        <span id="digital-clock" class="text-sm font-mono tracking-wider text-gray-200">00:00:00</span>
+        <span id="digital-clock" class="font-mono tracking-wider text-gray-200">00:00:00</span>
     </div>
 
     <!-- Direita: Usuário e Botão Sair -->
-    <div class="flex items-center space-x-4 text-sm text-white">
+    <div class="flex items-center space-x-4 text-white fonte-usuario-logado">
         <span class="text-gray-300">
             <i class="fa-solid fa-user mr-1"></i> Usuário Simulado (Admin)
         </span>        

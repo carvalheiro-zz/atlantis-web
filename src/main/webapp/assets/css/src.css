@@ -1,0 +1,105 @@
+/* ==========================================================
+   PADRÃO DE ESTILOS E TIPOGRAFIA GLOBAL - ATLANTIS WEB
+   ========================================================== */
+
+.sombra {
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Botões padronizados com #1e3a8a */
+.btn-sistema {
+    background-color: #1e3a8a !important;
+    border-color: #172554 !important;
+    color: #ffffff !important;
+}
+
+.btn-sistema:hover, .btn-sistema:focus {
+    background-color: #172554 !important;
+    border-color: #0f172a !important;
+    color: #ffffff !important;
+}
+
+/* Botão Excluir em vermelho escuro */
+.btn-excluir-escuro {
+    background-color: #991b1b !important;
+    border-color: #7f1d1d !important;
+    color: #ffffff !important;
+}
+
+.btn-excluir-escuro:hover, .btn-excluir-escuro:focus {
+    background-color: #7f1d1d !important;
+    border-color: #641e16 !important;
+    color: #ffffff !important;
+}
+
+/* Campos de formulário com borda #1e3a8a */
+.input-borda-sistema {
+    border-color: #1e3a8a !important;
+}
+
+.input-borda-sistema:focus {
+    border-color: #172554 !important;
+    -webkit-box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.25) !important;
+    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.25) !important;
+}
+
+
+/* ==========================================================
+   PADRONIZAÇÃO DE TAMANHOS DE FONTES (EXTERNALIZADO)
+   ========================================================== */
+
+/* 1. Campos (Inputs, Selects e Labels do formulário) */
+.fonte-campos, .fonte-campos input, .fonte-campos select, .fonte-campos label {
+    font-size: 13px !important;
+}
+
+/* 2. Texto do Título das Telas (Painéis principais) */
+.fonte-titulo-tela {
+    font-size: 16px !important;
+}
+
+/* 3. Textos das mensagens (Alertas de erro/sucesso) */
+.fonte-mensagem {
+    font-size: 13px !important;
+}
+
+/* 4. Textos das auditorias (Blocos informativos de criação/alteração) */
+.fonte-auditoria {
+    font-size: 11px !important;
+}
+
+/* 5. Textos dos botões */
+.fonte-botao {
+    font-size: 12px !important;
+}
+
+/* 6. Textos dos Menus */
+.fonte-menu {
+    font-size: 14px !important;
+}
+
+/* 7. Textos dos Sub Menus */
+.fonte-submenu {
+    font-size: 12.5px !important;
+}
+
+/* 8. Texto do Título do Sistema (Header principal) */
+.fonte-titulo-sistema {
+    font-size: 18px !important;
+}
+
+/* 9. Texto do relógio */
+.fonte-relogio {
+    font-size: 12px !important;
+}
+
+/* 10. Texto do Usuário logado */
+.fonte-usuario-logado {
+    font-size: 12px !important;
+}
+
+/* 11. Texto do footer */
+.fonte-footer {
+    font-size: 12px !important;
+}

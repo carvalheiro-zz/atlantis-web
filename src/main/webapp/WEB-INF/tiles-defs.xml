@@ -18,4 +18,11 @@
         <put name="body" value="/paginas/restrito/home.jsp" />
     </definition>
 
+	<!--============================================================================================= -->
+	<!--= INICIO ========================== USER MANAGER ==== NÃO ALTERAR =========================== -->
+	<!--============================================================================================= -->
+
+	<definition name=".telaCadastro" extends="template.principal">
+		<put name="body" value="/paginas/restrito/adm/tela/tela.jsp" />
+	</definition>
 </tiles-definitions>
