@@ -1,4 +1,4 @@
-package br.com.srcsoftware.web.atlantis;
+package br.com.srcsoftware.web.atlantis.actionform.login;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
