@@ -37,7 +37,7 @@ public abstract class AbstractUsuarioForm extends AbstractForm{
 	 * recebida do JSP: ${loginForm.acessoPermitido('1.tela.acessar')} Ou com
 	 * parâmetros separados passados pela chave.
 	 */
-	public boolean acessoPermitido(String permissaoKey) {
+	public boolean isAcessoPermitido(String permissaoKey) {
 		// Exemplo simulado de retorno positivo para validação
 		return true;
 	}
@@ -47,7 +47,7 @@ public abstract class AbstractUsuarioForm extends AbstractForm{
 	 * dos filhos. Exemplo no JSP:
 	 * ${loginForm.exibirGrupoMenu('funcionario.cliente.fornecedor')}
 	 */
-	public boolean exibirGrupoMenu(String grupoKey) {
+	public boolean isExibirGrupoMenu(String grupoKey) {
 		return true;
 	}
 }

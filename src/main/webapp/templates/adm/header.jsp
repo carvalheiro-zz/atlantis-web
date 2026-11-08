@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <nav class="navbar navbar-dark bg-dark px-4 py-2 w-100 flex justify-between items-center">
     <!-- Esquerda: Logo e Nome do Sistema -->
@@ -9,16 +9,16 @@
         </a>
     </div>
 
-    <!-- Centro: Relógio Digital -->
+    <!-- Centro: RelÃ³gio Digital -->
     <div class="flex items-center space-x-2 text-white bg-gray-800 px-3 py-1.5 rounded-md border border-gray-700 shadow-inner fonte-relogio">
         <i class="fa-regular fa-clock text-gray-400"></i>
         <span id="digital-clock" class="font-mono tracking-wider text-gray-200">00:00:00</span>
     </div>
 
-    <!-- Direita: Usuário e Botão Sair -->
+    <!-- Direita: UsuÃ¡rio e BotÃ£o Sair -->
     <div class="flex items-center space-x-4 text-white fonte-usuario-logado">
         <span class="text-gray-300">
-            <i class="fa-solid fa-user mr-1"></i> Usuário Simulado (Admin)
+            <i class="fa-solid fa-user mr-1"></i> UsuÃ¡rio Simulado (Admin)
         </span>        
         <a href="${pageContext.request.contextPath}/publico/admin/login.src?method=sair" class="btn btn-outline-light btn-sm">
             <i class="fa-solid fa-right-from-bracket mr-1"></i> Sair
@@ -26,7 +26,7 @@
     </div>
 </nav>
 
-<!-- Script para atualizar o relógio digital em tempo real -->
+<!-- Script para atualizar o relÃ³gio digital em tempo real -->
 <script>
     function updateClock() {
         const now = new Date();

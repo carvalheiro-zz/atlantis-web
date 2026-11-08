@@ -21,8 +21,15 @@ public abstract class AbstractAction<T> extends DispatchAction {
 	 */
 	@Override
 	protected String getMethodName(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response, String parameter) throws Exception {
-		String methodName = super.getMethodName(mapping, form, request, response, parameter);
-		return (methodName != null) ? methodName.toLowerCase() : null;
+	    String methodName = super.getMethodName(mapping, form, request, response, parameter);
+	    return toLowerCamelCase(methodName);
+	}
+
+	private String toLowerCamelCase(String str) {
+	    if (str == null || str.isEmpty()) {
+	        return str;
+	    }
+	    return Character.toLowerCase(str.charAt(0)) + str.substring(1);
 	}
 
     /**

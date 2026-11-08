@@ -91,10 +91,6 @@ public class TelaAction extends AbstractCRUDAction<TelaForm> {
 		return null;
 	}
 
-	
-
-	
-
 	@Override
 	public ActionForward filtrar(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
 		TelaForm telaForm = (TelaForm) form;
@@ -110,8 +106,7 @@ public class TelaAction extends AbstractCRUDAction<TelaForm> {
 
 	@Override
 	public ActionForward limpar(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		return null;
+		return abrirCadastro(mapping, form, request, response);
 	}
 
 	@Override

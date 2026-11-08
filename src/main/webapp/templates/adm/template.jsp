@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 
@@ -39,7 +39,7 @@
             <tiles:insert name="menu" />
         </aside>
 
-        <!-- BODY (Conteúdo Principal à direita do menu) -->
+        <!-- BODY (ConteÃºdo Principal Ã  direita do menu) -->
         <main class="flex-1 p-6 bg-gray-50 overflow-y-auto">
             <div class="container-fluid">
                 <tiles:insert name="body" />

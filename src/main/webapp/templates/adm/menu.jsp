@@ -32,7 +32,7 @@
 	                    <!-- Submenu 1: Tela -->
 	                    <logic:equal name="loginForm" value="true" property="acessoPermitido()">
 		                    <li>
-		                        <a href="${pageContext.request.contextPath}/restrito/admin/tela.src?method=novo" class="flex items-center px-3 py-1.5 text-gray-600 rounded-md hover:bg-gray-100 hover:text-blue-600 text-decoration-none transition-colors">
+		                        <a href="${pageContext.request.contextPath}/restrito/admin/tela.src?method=abrirCadastro" class="flex items-center px-3 py-1.5 text-gray-600 rounded-md hover:bg-gray-100 hover:text-blue-600 text-decoration-none transition-colors">
 		                            <i class="fa-solid fa-desktop w-5 text-gray-400"></i> Tela
 		                        </a>
 		                    </li>

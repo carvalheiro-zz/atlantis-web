@@ -97,19 +97,19 @@
                     <!-- FOOTER DO PANEL (Com botões de ação na ordem solicitada e ícones) -->
                     <div class="panel-footer" style="background-color: #f8fafc; border-top: 1px solid #cbd5e1; padding: 15px 20px; text-align: right;">
                         <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end;">
-                            <button type="submit" name="method" value="Cadastrar" class="btn btn-sistema btn-sm fonte-botao">
+                            <button type="submit" name="method" value="Inserir" class="btn btn-sistema btn-sm fonte-botao">
                                 <i class="fa fa-save"></i> Cadastrar
                             </button>
                             <button type="submit" name="method" value="Alterar" class="btn btn-sistema btn-sm fonte-botao">
                                 <i class="fa fa-edit"></i> Alterar
                             </button>
-                            <button type="submit" name="method" value="Pesquisar" class="btn btn-sistema btn-sm fonte-botao">
-                                <i class="fa fa-search"></i> Pesquisar
+                            <button type="submit" name="method" value="Listagem" class="btn btn-sistema btn-sm fonte-botao">
+                                <i class="fa fa-search"></i> Listagem
                             </button>
                             <button type="submit" name="method" value="Excluir" class="btn btn-excluir-escuro btn-sm fonte-botao">
                                 <i class="fa fa-trash"></i> Excluir
                             </button>
-                            <button type="submit" name="method" value="Novo" class="btn btn-sistema btn-sm fonte-botao">
+                            <button type="submit" name="method" value="Limpar" class="btn btn-sistema btn-sm fonte-botao">
                                 <i class="fa fa-plus"></i> Novo
                             </button>
                             <button type="submit" name="method" value="cancelar" class="btn btn-default btn-sm fonte-botao">

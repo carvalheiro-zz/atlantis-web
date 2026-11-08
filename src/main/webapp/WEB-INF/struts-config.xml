@@ -74,7 +74,9 @@
 		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
 
 	<!-- ================= Message Resources ================= -->
-	<message-resources parameter="ApplicationResources" />
+	<!-- <message-resources parameter="ApplicationResources" /> -->
+	<message-resources parameter="ApplicationResources" 
+                   factory="br.com.srcsoftware.web.config.resources.Utf8PropertyMessageResourcesFactory" />
 
 	<!-- ================= Plugins (Apache Tiles) ================= -->
 	<plug-in className="org.apache.struts.tiles.TilesPlugin">
