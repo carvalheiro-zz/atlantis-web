@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -25,12 +26,12 @@
             
             <div class="form-group">
                 <label>Usuário:</label>
-                <input type="text" name="usuario" required />
+                <input type="text" name="usuario" required  value="admin"/>
             </div>
             
             <div class="form-group">
                 <label>Senha:</label>
-                <input type="password" name="senha" required />
+                <input type="password" name="senha" required value="123"/>
             </div>
             
             <button type="submit" class="btn-submit">Logar</button>

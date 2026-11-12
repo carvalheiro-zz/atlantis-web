@@ -13,16 +13,19 @@
         <put name="body"   value="" />
     </definition>
 
-    <!-- Exemplo de Tela Filha (Estende o layout base e sobrescreve apenas o body) -->
-    <definition name="home" extends="template.principal">
-        <put name="body" value="/paginas/restrito/home.jsp" />
-    </definition>
 
 	<!--============================================================================================= -->
 	<!--= INICIO ========================== USER MANAGER ==== NÃO ALTERAR =========================== -->
 	<!--============================================================================================= -->
+    <!-- Exemplo de Tela Filha (Estende o layout base e sobrescreve apenas o body) -->
+    <definition name=".home" extends="template.principal">
+        <put name="body" value="/paginas/restrito/home.jsp" />
+    </definition>
 
-	<definition name=".telaCadastro" extends="template.principal">
-		<put name="body" value="/paginas/restrito/adm/tela/tela.jsp" />
+	<definition name=".telaCampos" extends="template.principal">
+		<put name="body" value="/paginas/restrito/adm/tela/tela-campos.jsp" />
+	</definition>
+	<definition name=".telaLista" extends="template.principal">
+		<put name="body" value="/paginas/restrito/adm/tela/tela-lista.jsp" />
 	</definition>
 </tiles-definitions>

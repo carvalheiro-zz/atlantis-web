@@ -12,7 +12,7 @@
 	</welcome-file-list>
 
 	<!-- ############ FILTROS (Ordem corrigida: Encoding primeiro) ############ -->
-	
+
 	<!-- Filtro para forçar o encoding UTF-8 nas requisições -->
 	<filter>
 		<filter-name>setCharacterEncodingFilter</filter-name>
@@ -27,7 +27,8 @@
 		</init-param>
 	</filter>
 
-	<!-- Filtro para adicionar cabeçalhos de segurança HTTP (Anti-Clickjacking, HSTS, etc.) -->
+	<!-- Filtro para adicionar cabeçalhos de segurança HTTP (Anti-Clickjacking, 
+		HSTS, etc.) -->
 	<filter>
 		<filter-name>httpHeaderSecurity</filter-name>
 		<filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
@@ -36,7 +37,7 @@
 	<!-- Mapeamento do Filtro de Encoding UTF-8 (Deve ser o primeiro) -->
 	<filter-mapping>
 		<filter-name>setCharacterEncodingFilter</filter-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>*.src</url-pattern>
 	</filter-mapping>
 
 	<!-- Mapeamento do Filtro de Segurança -->
@@ -62,6 +63,11 @@
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
 		<url-pattern>*.src</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/assets/*</url-pattern>
 	</servlet-mapping>
 
 	<session-config>

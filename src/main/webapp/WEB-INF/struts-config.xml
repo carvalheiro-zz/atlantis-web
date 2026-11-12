@@ -9,6 +9,7 @@
 	<form-beans>
 		<!-- Declare seus ActionForms aqui quando necessário -->
 		<form-bean name="loginForm" type="br.com.srcsoftware.web.atlantis.actionform.login.LoginForm"></form-bean>
+		<form-bean name="homeForm" type="br.com.srcsoftware.web.atlantis.actionform.HomeForm"></form-bean>
 		<form-bean name="telaForm" type="br.com.srcsoftware.web.atlantis.actionform.tela.TelaForm"></form-bean>
 	</form-beans>
 	
@@ -23,27 +24,31 @@
 
 	<!-- ================= Global Forwards ================= -->
 	<global-forwards>
-		<forward name="home" path="/home.do" />
+		<forward name="homeGlobalForwards" path="/restrito/admin/home.src?method=abrir" />
 	</global-forwards>
 	
 
 	<!-- ================= Action Mappings ================= -->
 	<action-mappings>
-		<!-- Mapeia a URL /home para renderizar a definição "home" do Tiles -->
-		<action path="/home"
-			type="org.apache.struts.actions.ForwardAction" parameter="home" />
-
-
 
 		<!-- Configuração da Action de Login baseada em DispatchAction -->
 		<action path="/publico/admin/login"
 			type="br.com.srcsoftware.web.atlantis.actionform.login.LoginAction"
 			name="loginForm"
-			 scope="session"
+			scope="session"
+			parameter="method">
+			
+			<forward name="telaLogin" path="/paginas/publico/adm/login.jsp" />
+		</action>
+		
+		<!-- Configuração da Action de Login baseada em DispatchAction -->
+		<action path="/restrito/admin/home"
+			type="br.com.srcsoftware.web.atlantis.actionform.HomeAction"
+			name="homeForm"
+			scope="session"
 			parameter="method">
 
-			<forward name="telaLogin" path="/paginas/publico/adm/login.jsp" />
-			<forward name="sucesso" path="/home.src" />
+			<forward name="home" path=".home" />
 		</action>
 		
 		
@@ -55,12 +60,8 @@
 			scope="session"
 			parameter="method" > 
 			    		
-			<forward name="telaCadastro" path=".telaCadastro"/>
-			<forward name="sucesso" path=".telaCadastro" />			
-			<forward name="pesquisar" path=".telaPesquisa" />
-			
-			<!-- Retorna para a home global do sistema ao cancelar/sair -->
-			<forward name="home" path="/home.src" redirect="true" />
+			<forward name="telaCampos" path=".telaCampos"/>
+			<forward name="telaLista" path=".telaLista" />
 		</action>
 				
 	</action-mappings>
@@ -74,7 +75,6 @@
 		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
 
 	<!-- ================= Message Resources ================= -->
-	<!-- <message-resources parameter="ApplicationResources" /> -->
 	<message-resources parameter="ApplicationResources" 
                    factory="br.com.srcsoftware.web.config.resources.Utf8PropertyMessageResourcesFactory" />
 

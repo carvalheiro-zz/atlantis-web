@@ -30,7 +30,7 @@ public class LoginAction extends DispatchAction {
         if ("admin".equals(usuario)) {
             log.info("Login bem-sucedido para o usuário: {}", usuario);
             request.getSession().setAttribute("usuarioLogado", usuario);
-            return mapping.findForward("sucesso");
+            return mapping.findForward("homeGlobalForwards");
         } else {
             log.warn("Falha de autenticação para o usuário: {}", usuario);
             return mapping.findForward("telaLogin");

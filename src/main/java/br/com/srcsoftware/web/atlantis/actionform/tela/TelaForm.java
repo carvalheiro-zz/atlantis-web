@@ -29,7 +29,7 @@ public class TelaForm extends AbstractCRUDForm{
 
 	@Override
 	public void limparCamposCadastro(HttpServletRequest request) {
-		setTela(new TelaDTO());
+		reset(null, request);
 	}
 
 	@Override
