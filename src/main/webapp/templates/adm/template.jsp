@@ -60,5 +60,9 @@
 
 	<!-- Inclusão Global da Modal de Confirmação -->
     <%@ include file="/templates/components/modal/modalConfirmacao.jsp" %>
+    
+    <!-- Inclusão Global da Modal de Conflito de Abas -->
+    <%@ include file="/templates/components/modal/modalSessaoExpirada.jsp" %>
+
 </body>
 </html:html>

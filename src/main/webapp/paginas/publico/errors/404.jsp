@@ -62,7 +62,7 @@
         <h1>404</h1>
         <h2>Página não encontrada</h2>
         <p>O endereço que você tentou acessar não existe, foi alterado ou está temporariamente indisponível no Gymsolutions.</p>
-        <a href="${pageContext.request.contextPath}/home.src" class="btn-home">Voltar ao Início</a>
+        <a href="${pageContext.request.contextPath}/restrito/admin/home.src?method=abrir" class="btn-home">Voltar ao Início</a>
     </div>
 
 </body>

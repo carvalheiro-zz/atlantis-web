@@ -105,7 +105,7 @@
                             <button type="button" class="w-full lg:w-auto btn btn-sistema btn-sm fonte-botao" onclick="abrirConfirmacao('Alterar', 'Deseja realmente alterar este registro?')">
                                 <i class="fa fa-edit"></i> Alterar
                             </button>
-                            <button type="button" onclick="window.location.href='${pageContext.request.contextPath}/restrito/admin/tela.src?method=Listagem'" class="w-full lg:w-auto btn btn-sistema btn-sm fonte-botao">
+                            <button type="button" onclick="window.location.href='${pageContext.request.contextPath}/restrito/admin/tela.src?method=ListagemX'" class="w-full lg:w-auto btn btn-sistema btn-sm fonte-botao">
                                 <i class="fa fa-list"></i> Listagem
                             </button>
                             <button type="button" class="w-full lg:w-auto btn btn-excluir-escuro btn-sm fonte-botao" onclick="abrirConfirmacao('Excluir', 'Deseja realmente excluir este registro?')">

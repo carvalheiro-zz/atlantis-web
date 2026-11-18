@@ -39,5 +39,12 @@
         </form>
     </div>
 
+	<script type="text/javascript">
+	    // Limpa o controle de abas ao chegar na tela de login
+	    localStorage.removeItem('active_system_tab');
+	    sessionStorage.removeItem('app_tab_id');
+	</script>
+	
+
 </body>
 </html>
