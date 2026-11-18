@@ -20,14 +20,23 @@
         <span class="text-gray-300">
             <i class="fa-solid fa-user mr-1"></i> Usuário Simulado (Admin)
         </span>        
-        <a href="${pageContext.request.contextPath}/publico/admin/login.src?method=sair" class="btn btn-outline-light btn-sm">
+        <!-- Adicionado o onclick para limpar o controle global de abas ao sair -->
+        <a href="${pageContext.request.contextPath}/publico/admin/login.src?method=sair" 
+           onclick="encerrarSessaoPrincipal()" 
+           class="btn btn-outline-light btn-sm">
             <i class="fa-solid fa-right-from-bracket mr-1"></i> Sair
         </a>
     </div>
 </nav>
 
-<!-- Script para atualizar o relógio digital em tempo real -->
+<!-- Script para atualizar o relógio digital em tempo real e função de encerramento -->
 <script>
+    // Função que limpa o controle de aba ativa ao fazer logout oficial
+    function encerrarSessaoPrincipal() {
+        localStorage.removeItem('active_system_tab');
+        sessionStorage.removeItem('app_tab_id');
+    }
+
     function updateClock() {
         const now = new Date();
         

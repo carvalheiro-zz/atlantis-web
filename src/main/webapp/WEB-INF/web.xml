@@ -16,7 +16,7 @@
 	<!-- Filtro para forçar o encoding UTF-8 nas requisições -->
 	<filter>
 		<filter-name>setCharacterEncodingFilter</filter-name>
-		<filter-class>br.com.srcsoftware.web.Filters.CharacterEncodingFilter</filter-class>
+		<filter-class>br.com.srcsoftware.web.filters.CharacterEncodingFilter</filter-class>
 		<init-param>
 			<param-name>encoding</param-name>
 			<param-value>UTF-8</param-value>
@@ -34,6 +34,12 @@
 		<filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
 	</filter>
 
+	<!-- NOVO: Filtro de Autenticação para rotas restritas -->
+	<filter>
+		<filter-name>AuthFilter</filter-name>
+		<filter-class>br.com.srcsoftware.web.filters.AuthFilter</filter-class>
+	</filter>
+
 	<!-- Mapeamento do Filtro de Encoding UTF-8 (Deve ser o primeiro) -->
 	<filter-mapping>
 		<filter-name>setCharacterEncodingFilter</filter-name>
@@ -45,6 +51,14 @@
 		<filter-name>httpHeaderSecurity</filter-name>
 		<url-pattern>/*</url-pattern>
 		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+	<!-- NOVO: Mapeamento do Filtro de Autenticação para proteger a área restrita -->
+	<filter-mapping>
+		<filter-name>AuthFilter</filter-name>
+		<url-pattern>/restrito/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
 	</filter-mapping>
 
 	<!-- ############ SERVLETS ############ -->

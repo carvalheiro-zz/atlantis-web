@@ -24,4 +24,23 @@ public class UsuarioSessaoPOJO{
 		return getUsuario().getLogin().equalsIgnoreCase( "adm" );
 	}
 	
+	/**
+	 * Valida se o usuário possui acesso à tela solicitada. Exemplo de expressão
+	 * recebida do JSP: ${loginForm.acessoPermitido('1.tela.acessar')} Ou com
+	 * parâmetros separados passados pela chave.
+	 */
+	public boolean isAcessoPermitido(String permissaoKey) {
+		// Exemplo simulado de retorno positivo para validação
+		return true;
+	}
+
+	/**
+	 * Valida se o grupo de menu inteiro deve ser exibido com base nas permissões
+	 * dos filhos. Exemplo no JSP:
+	 * ${loginForm.exibirGrupoMenu('funcionario.cliente.fornecedor')}
+	 */
+	public boolean isExibirGrupoMenu(String grupoKey) {
+		return true;
+	}
+	
 }

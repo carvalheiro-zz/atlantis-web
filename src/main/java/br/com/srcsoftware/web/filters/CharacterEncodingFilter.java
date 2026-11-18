@@ -1,4 +1,4 @@
-package br.com.srcsoftware.web.Filters;
+package br.com.srcsoftware.web.filters;
 
 import java.io.IOException;
 

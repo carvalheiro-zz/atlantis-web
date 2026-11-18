@@ -9,6 +9,8 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.DispatchAction;
 
+import br.com.srcsoftware.web.atlantis.dto.manager.usuario.usuario.UsuarioDTO;
+import br.com.srcsoftware.web.atlantis.dto.manager.usuario.usuario.UsuarioSessaoPOJO;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -20,7 +22,6 @@ public class LoginAction extends DispatchAction {
         log.info("Abrindo a tela de login.");
         return mapping.findForward("telaLogin");
     }
-
     public ActionForward logar(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response) throws Exception {
         
@@ -29,13 +30,27 @@ public class LoginAction extends DispatchAction {
         
         if ("admin".equals(usuario)) {
             log.info("Login bem-sucedido para o usuário: {}", usuario);
-            request.getSession().setAttribute("usuarioLogado", usuario);
+            
+            // Invalida qualquer sessão antiga órfã do Tomcat e cria uma limpa para a nova aba
+            HttpSession oldSession = request.getSession(false);
+            if (oldSession != null) {
+                oldSession.invalidate();
+            }
+            
+            UsuarioSessaoPOJO usuarioSessaoPOJO = new UsuarioSessaoPOJO();
+        	usuarioSessaoPOJO.setUsuario(new UsuarioDTO());
+        	usuarioSessaoPOJO.getUsuario().setLogin(usuario);
+        	
+            log.info("Login bem-sucedido para o usuário: {}", usuarioSessaoPOJO);
+            
+            request.getSession(true).setAttribute("usuarioLogado", usuarioSessaoPOJO);
             return mapping.findForward("homeGlobalForwards");
         } else {
             log.warn("Falha de autenticação para o usuário: {}", usuario);
             return mapping.findForward("telaLogin");
         }
     }
+   
 
     public ActionForward sair(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response) throws Exception {

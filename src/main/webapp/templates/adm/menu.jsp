@@ -6,7 +6,7 @@
     <h6 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Navegação</h6>
     <ul class="space-y-1 list-unstyled m-0 p-0">
         <li>
-            <a href="${pageContext.request.contextPath}/home.do" class="flex items-center px-3 py-2 text-gray-700 rounded-md hover:bg-gray-100 hover:text-blue-600 text-decoration-none transition-colors">
+            <a href="${pageContext.request.contextPath}/restrito/admin/home.src?method=abrir" class="flex items-center px-3 py-2 text-gray-700 rounded-md hover:bg-gray-100 hover:text-blue-600 text-decoration-none transition-colors">
                 <i class="fa-solid fa-house w-6 text-gray-500"></i> Início
             </a>
         </li>
@@ -17,7 +17,7 @@
         </li>
 
         <!-- Menu Administração -->
-        <logic:equal name="loginForm" value="true" property="exibirGrupoMenu()">
+        <logic:equal name="usuarioLogado" value="true" property="exibirGrupoMenu()">
 	        <li>
 	            <!-- Adicionado um ID para facilitar a referência no script -->
 	            <details id="menu-administracao" class="group">
@@ -30,7 +30,7 @@
 	                
 	                <ul class="pl-6 pt-1 space-y-1 list-unstyled fonte-submenu">
 	                    <!-- Submenu 1: Tela -->
-	                    <logic:equal name="loginForm" value="true" property="acessoPermitido()">
+	                    <logic:equal name="usuarioLogado" value="true" property="acessoPermitido()">
 		                    <li>
 		                        <a href="${pageContext.request.contextPath}/restrito/admin/tela.src?method=abrirCadastro" class="flex items-center px-3 py-1.5 text-gray-600 rounded-md hover:bg-gray-100 hover:text-blue-600 text-decoration-none transition-colors">
 		                            <i class="fa-solid fa-desktop w-5 text-gray-400"></i> Tela
