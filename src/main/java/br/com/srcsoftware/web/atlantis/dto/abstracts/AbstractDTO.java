@@ -1,13 +1,15 @@
 package br.com.srcsoftware.web.atlantis.dto.abstracts;
 
+import java.io.Serializable;
+
 import br.com.srcsoftware.web.utilidades.ObjectUtils;
 import br.com.srcsoftware.web.utilidades.Utilidades;
-import lombok.Data;
 
 
-public abstract class AbstractDTO{
+public abstract class AbstractDTO implements Serializable{
 
-	private String versao;
+	private static final long serialVersionUID = 8192715932900166541L;
+	
 	private String idTemp;
 
 	public String getIdTemp() {
@@ -20,14 +22,5 @@ public abstract class AbstractDTO{
 	public void setIdTemp( String idTemp ) {
 		this.idTemp = Utilidades.removerEspacosExcedentes( idTemp );
 	}
-
-	public String getVersao() {
-		return versao;
-	}
-
-	public void setVersao(String versao) {
-		this.versao = versao;
-	}	
-	
-	
+		
 }

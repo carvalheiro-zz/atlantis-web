@@ -62,7 +62,7 @@
         <h1>500</h1>
         <h2>Erro Interno do Servidor</h2>
         <p>Ocorreu uma falha inesperada no processamento da sua requisição. Por favor, tente novamente em instantes.</p>
-        <a href="${pageContext.request.contextPath}/home.src" class="btn-home">Voltar ao Início</a>
+        <a href="${pageContext.request.contextPath}/restrito/admin/home.src?method=abrir" class="btn-home">Voltar ao Início</a>
     </div>
 
 </body>

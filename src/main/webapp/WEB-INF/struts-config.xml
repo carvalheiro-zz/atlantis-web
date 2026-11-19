@@ -8,29 +8,62 @@
 	<!-- ================= Form Bean Definitions ================= -->
 	<form-beans>
 		<!-- Declare seus ActionForms aqui quando necessário -->
+		<form-bean name="loginForm" type="br.com.srcsoftware.web.atlantis.actionform.login.LoginForm"></form-bean>
+		<form-bean name="homeForm" type="br.com.srcsoftware.web.atlantis.actionform.HomeForm"></form-bean>
+		<form-bean name="telaForm" type="br.com.srcsoftware.web.atlantis.actionform.tela.TelaForm"></form-bean>
 	</form-beans>
+	
+	<global-exceptions>
+    <!-- Qualquer erro genérico ou não tratado cai na página de erro interno -->
+    <exception 
+        key="erro.inesperado" 
+        type="java.lang.Exception" 
+        path="/paginas/publico/errors/500.jsp" 
+        scope="request"/>
+</global-exceptions>
 
 	<!-- ================= Global Forwards ================= -->
 	<global-forwards>
-		<forward name="home" path="/home.do" />
+		<forward name="homeGlobalForwards" path="/restrito/admin/home.src?method=abrir" />
 	</global-forwards>
+	
 
 	<!-- ================= Action Mappings ================= -->
 	<action-mappings>
-		<!-- Mapeia a URL /home para renderizar a definição "home" do Tiles -->
-		<action path="/home"
-			type="org.apache.struts.actions.ForwardAction" parameter="home" />
-
-
 
 		<!-- Configuração da Action de Login baseada em DispatchAction -->
 		<action path="/publico/admin/login"
-			type="br.com.srcsoftware.web.atlantis.LoginAction"
-			parameter="method" scope="session">
-
+			type="br.com.srcsoftware.web.atlantis.actionform.login.LoginAction"
+			name="loginForm"
+			scope="session"
+			parameter="method">
+			
 			<forward name="telaLogin" path="/paginas/publico/adm/login.jsp" />
-			<forward name="sucesso" path="/home.src" />
 		</action>
+		
+		<!-- Configuração da Action de Login baseada em DispatchAction -->
+		<action path="/restrito/admin/home"
+			type="br.com.srcsoftware.web.atlantis.actionform.HomeAction"
+			name="homeForm"
+			scope="session"
+			parameter="method">
+
+			<forward name="home" path=".home" />
+		</action>
+		
+		
+		
+		<!-- Configuração da Action de Login baseada em DispatchAction -->
+		<action path="/restrito/admin/tela"
+			type="br.com.srcsoftware.web.atlantis.actionform.tela.TelaAction"
+			name="telaForm"
+			scope="session"
+			parameter="method" > 
+			    		
+			<forward name="telaCampos" path=".telaCampos"/>
+			<forward name="telaLista" path=".telaLista" />
+		</action>
+				
 	</action-mappings>
 
 
@@ -42,7 +75,8 @@
 		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
 
 	<!-- ================= Message Resources ================= -->
-	<message-resources parameter="ApplicationResources" />
+	<message-resources parameter="ApplicationResources" 
+                   factory="br.com.srcsoftware.web.config.resources.Utf8PropertyMessageResourcesFactory" />
 
 	<!-- ================= Plugins (Apache Tiles) ================= -->
 	<plug-in className="org.apache.struts.tiles.TilesPlugin">
